@@ -73,7 +73,7 @@ public class HTTPNetworkTransport {
   let session: URLSession
   let serializationFormat = JSONSerializationFormat.self
   let useGETForQueries: Bool
-  let delegate: HTTPNetworkTransportDelegate?
+  weak var delegate: HTTPNetworkTransportDelegate?
   private let requestCreator: RequestCreator
   private let sendOperationIdentifiers: Bool
   
